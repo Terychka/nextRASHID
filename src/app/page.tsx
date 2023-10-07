@@ -6,8 +6,8 @@ export default function Home() {
   return (
      <>
      <InputCard/>
-      <Card head="бебрабебраная" text= "бебра"/>
-      <Card head="нюхать беберу " text= "бебра"/>
+      <Card head="НАЗАРА ЗАБАНИЛИ" text= "БАННН"/>
+      <Card head="НАЗАР=БАН " text= "БАНАН"/>
       </>
   )
 }
