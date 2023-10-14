@@ -6,12 +6,15 @@ import { Products } from '../types';
 export default async function InputOutput() {
     const url = "https://652124aea4199548356cd977.mockapi.io/products"
     const response = await fetch(url);
-    const products:Products = await response.json(); 
+    const products:Products[] = await response.json(); 
    return (
     <>
      <InputCard/>
-      <Card head="НАЗАРА ЗАБАНИЛИ" text= "БАННН"/>
-      <Card head="НАЗАР=БАН " text= "БАНАН"/>
+      {products.map((product) => (
+        <div key={product.id}>
+          <Card head={product.head} text={product.text} />
+        </div>
+      ))}
       </>
   )
 }
